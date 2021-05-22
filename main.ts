@@ -1,7 +1,8 @@
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
-    if (15 < input.temperature() && 22 > input.temperature()) {
+    if (15 <= input.temperature() && 22 >= input.temperature()) {
         basic.showIcon(IconNames.Happy)
+        basic.showNumber(input.temperature())
     } else if (15 >= input.temperature()) {
         basic.showIcon(IconNames.Surprised)
         basic.showArrow(ArrowNames.North)
